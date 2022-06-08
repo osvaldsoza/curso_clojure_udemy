@@ -27,3 +27,22 @@
 
 (def idades [30 45 25])
 (soma-das-idades idades)
+
+
+(def nomes ["Marcio" "Joao" "Osf" "Tiago" "Tama" "Ana" "Fernanda"])
+
+(defn tamanho-medio-dos-nomes
+  [nomes]
+  (/ (reduce + (map count nomes)) (count nomes)))
+
+(tamanho-medio-dos-nomes nomes)
+
+(defn tamanho-medios-dos-nomes-maior-que-3
+  [nomes]
+  (let [nome-maior-que-3 #(> % 3)
+        nomes-maior-3 (filter nome-maior-que-3 (map count nomes))
+        soma-dos-carcteres (reduce + nomes-maior-3)]
+    (double (/ soma-dos-carcteres (count nomes-maior-3)))))
+sh
+
+(tamanho-medios-dos-nomes-maior-que-3 nomes)

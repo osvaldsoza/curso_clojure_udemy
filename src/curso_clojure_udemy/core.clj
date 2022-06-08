@@ -1,11 +1,14 @@
 (ns curso-clojure-udemy.core)
 
-(defn soma
-  [x y]
-  (+ x y))
 
-(defn imprime-soma
-  []
-  (println (soma 2.0 2.0)))
+(defn compras []
+  {:tomate {:qunatidade 2 :preco 0.45}
+   :arroz  {:qunatidade 3 :preco 6.45}
+   :feijao {:qunatidade 1 :preco 10.00}})
+
+(compras)
+
+"(defn -main []
+  (println (tamanho-medios-dos-nomes-maior-que-3 nomes)))"
 
 
